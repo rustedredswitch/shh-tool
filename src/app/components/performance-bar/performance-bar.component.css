@@ -1,0 +1,14 @@
+div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+* {
+  margin: 10px;
+}
+
+#performance-bar {
+  background-color: royalblue;
+  margin: 0;
+}

@@ -3,11 +3,15 @@ import {BrowserModule} from '@angular/platform-browser';
 
 import {AppComponent} from './app.component';
 import {PerformanceBarComponent} from "./components/performance-bar/performance-bar.component";
+import {SftpSpaceComponent} from './components/sftp-space/sftp-space.component';
+import {SshSpaceComponent} from './components/ssh-space/ssh-space.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PerformanceBarComponent
+    PerformanceBarComponent,
+    SftpSpaceComponent,
+    SshSpaceComponent
   ],
   imports: [
     BrowserModule
