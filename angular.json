@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ssh-tool:build:production"
+              "buildTarget": "ssh-tool:build:production"
             },
             "development": {
-              "browserTarget": "ssh-tool:build:development"
+              "buildTarget": "ssh-tool:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ssh-tool:build"
+            "buildTarget": "ssh-tool:build"
           }
         },
         "test": {
@@ -94,5 +94,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
