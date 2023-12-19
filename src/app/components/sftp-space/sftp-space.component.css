@@ -1,4 +1,10 @@
 :host {
   background-color: lightgray;
-  padding: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  width: 23%;
+}
+
+* {
+  margin: 0;
 }
