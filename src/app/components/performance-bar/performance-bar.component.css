@@ -1,4 +1,5 @@
-div {
+:host {
+  background-color: royalblue;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -8,7 +9,6 @@ div {
   margin: 10px;
 }
 
-#performance-bar {
-  background-color: royalblue;
-  margin: 0;
+div {
+  display: flex;
 }
