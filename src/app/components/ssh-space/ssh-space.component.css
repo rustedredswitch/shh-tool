@@ -1,3 +1,5 @@
+@import '../../../../node_modules/xterm/css/xterm.css';
+
 :host {
   background-color: black;
   padding: 15px;
