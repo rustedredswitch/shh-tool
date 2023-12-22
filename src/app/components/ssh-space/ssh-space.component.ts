@@ -1,11 +1,6 @@
-import {
-  AfterViewInit,
-  Component,
-  ElementRef,
-  ViewChild,
-  ViewEncapsulation
-} from '@angular/core';
-import { Terminal } from 'xterm';
+import {AfterViewInit, Component, ElementRef, ViewChild, ViewEncapsulation} from '@angular/core';
+import {Terminal} from 'xterm';
+import {FitAddon} from 'xterm-addon-fit';
 
 @Component({
   selector: 'app-ssh-space',
@@ -17,17 +12,23 @@ export class SshSpaceComponent implements AfterViewInit {
   public term!: Terminal;
   @ViewChild('terminal') terminalDiv!: ElementRef;
 
-  constructor() {}
+  constructor() {
+  }
 
   ngAfterViewInit() {
     this.term = new Terminal({
-      cursorBlink: true, // 光标闪烁
-      scrollback: 1000, // 终端中滚动保留的行数
-      tabStopWidth: 8, //
+      cursorBlink: true,
     });
+
+    const fitAddon = new FitAddon();
+    this.term.loadAddon(fitAddon);
+
     this.term.open(this.terminalDiv.nativeElement);
+    fitAddon.fit();
+
+
     let i = 0;
-    while(i < 100){
+    while (i < 100) {
       this.term.writeln('Welcome to xterm.js');
       this.term.writeln('Prova');
       this.term.writeln('Prova');
