@@ -1,1 +1,6 @@
-<div #terminal class="terminal"></div>
+<ng-terminal
+  #term
+  [dataSource]="writeSubject"
+  (data)="onKeyInput($event)"
+  class="ng-terminal">
+</ng-terminal>
