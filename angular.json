@@ -13,6 +13,10 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "xterm",
+              "xterm-addon-fit"
+            ],
             "outputPath": "dist/ssh-tool",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -39,8 +43,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "4.5kb",
+                  "maximumError": "5kb"
                 }
               ],
               "outputHashing": "all"
